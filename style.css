@@ -44,14 +44,32 @@
 
 
 /* Home section */
-.Home-left-margins{
-    margin-left: 8%;
+#Home{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.Home-left-text{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  text-align: left;
+  margin: clamp(1%, 5vw, 10%);
+  /* background-color: violet; */
 }
 
 @media screen and (max-width: 768px) {
+    #Home{
+      display: flex;
+      flex-direction:column;
+      background-color: gray;
+    }
+
     .Home-left-margins{
         margin: 15% auto 15%;
     }
+
+
   }
 
 .center-div {
@@ -87,13 +105,19 @@
   }
 
   .Home-links{
-    min-width: 380px;
-    display: flex;
-    align-items: center;
+    display: flex; /* Use flexbox to keep elements in one line */
+    flex-wrap: nowrap; /* Prevent elements from wrapping to the next line */
+    justify-content: flex-start; /* Optional: Align elements to the left */
+    align-items: center; /* Optional: Vertically center elements */
   }
 
   .Home-buttons{
-    margin-right: 20px;
+    white-space: nowrap; /* Prevent line breaks within each span */
+    margin-right: 10px; /* Optional: Add some spacing between elements */
+  }
+
+  .Home-media-links{
+    white-space: nowrap; /* Prevent line breaks within each span */
   }
 
   /* Animation for INTRO TEXT TYPING */
