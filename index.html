@@ -62,12 +62,12 @@
                   </span>
                 </div>
               </div>
-              <img src="src/img/Intro-pic.png">
+              <img src="src/img/Intro-pic.png" alt="profile-side-image">
 
     </div>
 
     <div class="container-fluid" id="About">
-        <img src="src/img/photo.png">
+        <img src="src/img/photo.png" alt="profile-image">
         <div class="About-text">
           <h1>About me</h1>
           <p>Hello, I'm Sainath Chilakalapudi, and my journey in the world of content creation is driven by my lifelong passion for programming, problem-solving, and creative design. Ever since I was a child, I've been captivated by the art of crafting innovative solutions and visually appealing designs. Today, I'm fully immersed in this dynamic field, constantly pushing boundaries and seeking new horizons to achieve remarkable results.</p>
@@ -108,7 +108,49 @@
       </div>
     </div>
 
-    <button id="clickMeButton">Click Me</button>
+
+    <h1 id="message"></h1>
+    <button id="clickButton">Click Me</button>
+
+    <script>
+        // Array of messages
+        const messages = [
+            "Click Me",
+            "Once Again",
+            "Once more",
+            "Another time",
+            "Come On",
+            "Let's go",
+            "Try More",
+            "A Little Again",
+            "Yaay! Thanks for making it this far, really love your effort :)"
+        ];
+
+        // Get elements
+        const messageElement = document.getElementById('message');
+        const button = document.getElementById('clickButton');
+
+        // Initialize a counter to keep track of the current message
+        let messageIndex = 0;
+
+        // Add a click event listener to the button
+        button.addEventListener('click', function() {
+            // If we have reached the end of the array, reset the index to 0
+            if (messageIndex >= messages.length-1) {
+              
+                messageElement.textContent = messages[messageIndex];
+                messageIndex = 0;
+                button.textContent = 'Retry'; // Change button text to "Retry"
+            } else {
+                // Hide the <h1> element for other messages
+                messageElement.textContent = '';
+                // Change the button text to the current message
+                button.textContent = messages[messageIndex];
+                // Increment the message index
+                messageIndex++;
+            }
+        });
+    </script>
 
     <script src="index.js"></script>
 </body>
