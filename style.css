@@ -1,0 +1,164 @@
+/* Font from Local storage */
+    @font-face {
+    font-family: 'Impact';
+    src: url('src/fonts/impact.ttf') format('truetype'); /*actual URL or path to font file */
+  }
+  @font-face {
+    font-family: 'Gobold Bold';
+    src: url('src/fonts/Gobold\ Bold.otf') format('opentype'); /*actual URL or path to font file */
+  }
+  @font-face {
+    font-family: 'Myriad Pro';
+    src: url('src/fonts/Myriad\ Pro\ Regular.ttf') format('truetype'); /*actual URL or path to font file */
+  }
+  @font-face {
+    font-family: 'Tech Headlines';
+    src: url('src/fonts/Tech\ Headlines.ttf') format('truetype'); /*actual URL or path to font file */
+  }
+  @font-face {
+    font-family: 'Helvetica LT Condensed Light';
+    src: url('src/fonts/Helvetica\ LT\ Condensed\ Light.ttf') format('truetype'); /*actual URL or path to font file */
+  }
+
+
+/* Nav bar section */
+.header{
+    box-shadow: 0px 10px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* font-family: 'Gobold Bold', sans-serif; */
+    font-size: 30px;
+}
+
+.navbar-brand img{
+    margin: 5px;
+}
+
+.nav-right{
+    margin-left: auto;
+}
+
+
+/* Home section */
+.Home-left-margins{
+    margin-left: 8%;
+}
+
+@media screen and (max-width: 768px) {
+    .Home-left-margins{
+        margin: 15% auto 15%;
+    }
+  }
+
+.center-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.Home-greeting{
+    font-size: max(20px,24px);
+    font-family: 'Myriad Pro', sans-serif;
+    display: block;
+  }
+  
+  .Home-name{
+    margin: 0;
+    padding-top: 0;
+    font-family: 'Tech Headlines', sans-serif;
+    letter-spacing: min(1vw, 5px);
+    font-size: clamp(34px , 5vw, 75px);/* Responsive font size + maximum font size in pixels */
+    display: block;
+  }
+  
+  .Home-intro{
+    margin: 0; /* Distance between two lines vertically*/
+    font-family: 'Helvetica LT Condensed Light', Helvetica, sans-serifsans-serif;
+    font-size: clamp(10px , 2vw, 50px);
+    white-space: nowrap;
+  }
+
+  .Home-text{
+    margin-bottom: 10px;
+  }
+
+  .Home-links{
+    min-width: 380px;
+    display: flex;
+    align-items: center;
+  }
+
+  .Home-buttons{
+    margin-right: 20px;
+  }
+
+  /* Animation for INTRO TEXT TYPING */
+  .type-text {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 8px solid #212529; /* Cursor effect */
+    animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
+    vertical-align: top; /* Adjust the value for vertical alignment */
+  }
+  
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+  
+  @keyframes blink-caret {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #212529;/* Cursor Color */
+    }
+  }
+  
+
+
+  /* About Section */
+  #About{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 720px;
+    background-color: mediumaquamarine;
+  }
+
+  #About img{
+    width: 350px;
+    height: auto;
+  }
+
+  @media screen and (max-width: 768px) {
+    #About{
+        display: flex;
+        flex-direction:column-reverse;
+        background-color: gray;
+    }
+
+    #About img{
+        margin-bottom: 10%;
+    }
+  }
+
+  .About-text{
+    max-width: 568px;
+    padding: 6%;
+  }
+
+  .About-text h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+
+  .About-text p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }

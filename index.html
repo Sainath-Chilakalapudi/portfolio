@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sainath's Portfolio</title>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    </head>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<body>
+      <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark header">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img src="src/img/photo.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-top">
+              SAINATH
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav nav-right">
+                <a class="nav-link active" href="#Home">Home</a>
+                <a class="nav-link" href="#About">About</a>
+                <a class="nav-link" href="#">Skills</a>
+                <a class="nav-link" href="#">Projects</a>
+                <!-- <a class="nav-link" href="#">Reviews</a> -->
+                <a class="nav-link" href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+      </nav>
+    
+    <div class="container-fluid" id="Home">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 center-div"><!-- Left part -->
+              <div class="Home-left-margins">
+                <div class="Home-text">
+                  <span class ="Home-greeting">Hi There! MYSELF</span>
+                  <span class="Home-name">SAINATH CHILAKALAPUDI</span>
+                  <span class="Home-intro">I'M A <span class="type-text"></span></span>
+                </div>
+                <div class="Home-links">
+                  <span class="Home-buttons">
+                    <button type="button" class="btn btn-dark">RESUME</button>
+                    <button type="button" class="btn btn-outline-dark">HIRE ME</button>
+                  </span>
+                  <span>
+                    <i class="fa-brands fa-github fa-2xl fa-bounce"></i>
+                    <i class="fa-brands fa-instagram fa-2xl"></i>
+                    <i class="fa-brands fa-behance fa-2xl"></i>
+                    <i class="fa-brands fa-discord fa-2xl fa-shake"></i>
+                    <i class="fa-brands fa-youtube fa-2xl"></i>
+                  </span>
+                </div>
+                <div class="ref"></div>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12 center-div"><!-- Right part -->
+              <img src="src/img/Intro-pic.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="About">
+        <img src="src/img/photo.png">
+        <div class="About-text">
+          <h1>About me</h1>
+          <p>Hello, I'm Sainath Chilakalapudi, and my journey in the world of content creation is driven by my lifelong passion for programming, problem-solving, and creative design. Ever since I was a child, I've been captivated by the art of crafting innovative solutions and visually appealing designs. Today, I'm fully immersed in this dynamic field, constantly pushing boundaries and seeking new horizons to achieve remarkable results.</p>
+
+        </div>
+    </div>
+
+    <button id="clickMeButton">Click Me</button>
+
+    <script src="index.js"></script>
+</body>
+</html>
