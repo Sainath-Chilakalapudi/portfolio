@@ -63,7 +63,6 @@
     #Home{
       display: flex;
       flex-direction:column;
-      background-color: gray;
     }
 
     .Home-left-margins{
@@ -72,6 +71,20 @@
 
 
   }
+
+@media screen and (max-width: 412px){
+  .Home-links{
+    flex-wrap: wrap;
+  }
+
+  .Home-buttons{
+    display: block;
+  }
+
+  .Home-media-links{
+    margin-top: 10px;
+  }
+}
 
 .center-div {
     display: flex;
@@ -107,7 +120,6 @@
 
   .Home-links{
     display: flex; /* Use flexbox to keep elements in one line */
-    flex-wrap: nowrap; /* Prevent elements from wrapping to the next line */
     justify-content: flex-start; /* Optional: Align elements to the left */
     align-items: center; /* Optional: Vertically center elements */
   }
@@ -155,6 +167,7 @@
     align-items: center;
     justify-content: space-around;
     min-height: 720px;
+    overflow: hidden;
     background-color: mediumaquamarine;
   }
 
@@ -187,3 +200,73 @@
   .About-text p{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
+
+
+  /* Services */
+#Services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 720px;
+  background-color: rgb(12, 65, 86);
+}
+
+#Services .Heading {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: aqua;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.skill-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.skill-box {
+  width: calc(30% - 20px); /* Adjust this for 3 columns, with 20px margin between boxes */
+  height: 210px;
+  margin: 10px; /* Margin around each skill box */
+  text-align: center;
+  background-color: #099797;
+  border-radius: 10%;
+  border: 1px solid blueviolet; /* Optional: Add a border around each skill box */
+  padding: 20px; /* Optional: Add padding inside each skill box */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-box img {
+  max-width: 130px;
+  height: auto;
+}
+
+.skill-box p {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Media Queries for Responsive Layout */
+
+@media (min-width: 768px) and (max-width: 991px) { /* For tablets */
+  .skill-box {
+    width: calc(30% - 20px); /* 2 columns with 20px margin between boxes */
+  }
+}
+
+@media (max-width: 767px) { /* For phone screens */
+  #Services .Heading{
+    margin-top: 15%;
+  }
+  .skill-box {
+    min-width: 50%; /* Full width for single column */
+    margin: 10%;
+  }
+}
+
