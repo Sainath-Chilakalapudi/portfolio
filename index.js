@@ -25,6 +25,31 @@ $(document).ready(function () {
     });
     });
 
+    // This function is responsible for highlighting the active navigation link on scroll 
+    function highlightNavLink() {
+        let fromTop = window.scrollY + 400; // Adjust this value to match design
+        
+        navLinks.forEach(link => {
+            let sectionId = link.getAttribute("href").substring(1); // Get the section id from href
+            
+            // Find the corresponding content section with the same id
+            let section = document.getElementById(sectionId);
+            
+            // Check if the section exists and if it's currently visible in the viewport
+            if (section && section.offsetTop <= fromTop &&
+                section.offsetTop + section.offsetHeight > fromTop) {
+                // If the section is in view, add the "active" class to the navigation link
+                link.classList.add("active");
+            } else {
+                // If the section is not in view, remove the "active" class from the navigation link
+                link.classList.remove("active");
+            }
+        });
+    }
+    
+    window.addEventListener("scroll", highlightNavLink);
+    highlightNavLink(); // Initial highlight
+
 
     // Text typing effect
     const textList = [
