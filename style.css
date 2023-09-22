@@ -184,12 +184,14 @@
     }
 
     #About img{
-        margin-bottom: 10%;
+      width: 65%;
+      margin-bottom: 10%;
     }
   }
 
   .About-text{
     max-width: 568px;
+    margin: 10%;
     padding: 6%;
   }
 
@@ -244,6 +246,7 @@
 
 .skill-box img {
   max-width: 130px;
+  width: 100%;
   height: auto;
 }
 
